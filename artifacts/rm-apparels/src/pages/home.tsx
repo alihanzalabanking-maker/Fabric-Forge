@@ -1,136 +1,495 @@
-import React from "react";
 import { Link } from "wouter";
-import { ArrowRight, CheckCircle2, ShieldCheck, Zap, Factory } from "lucide-react";
+import {
+  ArrowRight,
+  ArrowUpRight,
+  Award,
+  Layers,
+  PackageCheck,
+  Ruler,
+  ShieldCheck,
+  Truck,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import { openWhatsApp } from "@/lib/whatsapp";
 
+const BASE = import.meta.env.BASE_URL;
+
+const stats = [
+  { value: "30", label: "Pieces MOQ" },
+  { value: "14+", label: "Years of craft" },
+  { value: "120+", label: "Brand partners" },
+  { value: "20", label: "Day lead time" },
+];
+
+const featured = [
+  {
+    name: "Polo Shirts",
+    slug: "polo-shirts",
+    img: `${BASE}polo-shirt.png`,
+    tag: "Summer Essentials",
+  },
+  {
+    name: "Heavyweight Hoodies",
+    slug: "hoodies",
+    img: `${BASE}hoodie.png`,
+    tag: "Winter Drop",
+  },
+  {
+    name: "Dry Fit Performance Tee",
+    slug: "dry-fit-t-shirts",
+    img: `${BASE}dry-fit-tshirt.png`,
+    tag: "Sports",
+  },
+  {
+    name: "Varsity Jackets",
+    slug: "varsity-jackets",
+    img: `${BASE}varsity-jacket.png`,
+    tag: "Outerwear",
+  },
+];
+
+const collections = [
+  {
+    id: "summer",
+    name: "Summer",
+    img: `${BASE}terry-shorts.png`,
+    desc: "Breathable cottons, lightweight terry, casual silhouettes.",
+  },
+  {
+    id: "winter",
+    name: "Winter",
+    img: `${BASE}hoodie.png`,
+    desc: "Heavyweight fleece, puffers, layered warmth.",
+  },
+  {
+    id: "sports",
+    name: "Sports",
+    img: `${BASE}sports-tracksuit.png`,
+    desc: "Technical fabrics, dry-fit mesh, high mobility.",
+  },
+];
+
+const valueProps = [
+  {
+    icon: PackageCheck,
+    title: "Low MOQ — 30 pieces",
+    desc: "Built for emerging brands. Start with a capsule, scale into a season.",
+  },
+  {
+    icon: Layers,
+    title: "Imported & local fabrics",
+    desc: "Premium Chinese mills for finish, durable Pakistani textiles for value.",
+  },
+  {
+    icon: Award,
+    title: "Custom branding",
+    desc: "Custom labels, woven tags, embroidery, screen and DTG print.",
+  },
+  {
+    icon: Truck,
+    title: "Worldwide shipping",
+    desc: "DDP and FOB shipping to the EU, UK, US, GCC and beyond.",
+  },
+];
+
 export default function Home() {
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="relative w-full overflow-hidden bg-secondary">
-        <div className="absolute inset-0 z-0">
-          <img 
-            src="/hero.png" 
-            alt="Clothing Manufacturing Factory" 
-            className="w-full h-full object-cover opacity-30 mix-blend-overlay"
+      {/* HERO */}
+      <section className="relative w-full overflow-hidden bg-secondary text-white">
+        <div className="absolute inset-0">
+          <img
+            src={`${BASE}hero.png`}
+            alt="RM Apparels editorial"
+            className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-secondary/90 via-secondary/70 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/70 to-secondary/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/10 to-transparent" />
         </div>
-        
-        <div className="container relative z-10 mx-auto px-4 py-32 md:py-48 flex flex-col items-start">
-          <div className="inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-sm font-medium text-primary mb-6 backdrop-blur-sm">
-            <span className="flex h-2 w-2 rounded-full bg-primary mr-2 animate-pulse"></span>
-            Premium Manufacturing Partner
-          </div>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white max-w-3xl leading-tight tracking-tight mb-6">
-            Precision Apparel.<br />
-            <span className="text-primary">Engineered in Bulk.</span>
-          </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-10 leading-relaxed">
-            High-end clothing manufacturing for international brands. Low MOQs, premium imported & local fabrics, and rapid production cycles. Built for performance.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <Link href="/collections">
-              <Button size="lg" className="w-full sm:w-auto h-14 px-8 text-base font-semibold group">
-                Explore Catalog
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </Link>
-            <Button size="lg" variant="outline" className="w-full sm:w-auto h-14 px-8 text-base font-semibold border-white/20 text-white hover:bg-white/10" onClick={() => openWhatsApp("Hi, I want to discuss a bulk order.")}>
-              WhatsApp Us
-            </Button>
+
+        <div className="container relative z-10 mx-auto px-4 pt-24 pb-20 md:pt-36 md:pb-28 lg:pt-44 lg:pb-32">
+          <div className="max-w-3xl">
+            <div className="flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-white/70 mb-8">
+              <span className="h-px w-10 bg-primary" />
+              <span>Est. Pakistan — Worldwide Manufacturing</span>
+            </div>
+            <h1 className="font-display font-semibold text-5xl md:text-7xl lg:text-[88px] leading-[0.95] tracking-tight mb-8">
+              Apparel made for
+              <br />
+              <span className="italic font-light text-white/80">the brands</span>
+              <br />
+              that get noticed.
+            </h1>
+            <p className="text-lg md:text-xl text-white/75 max-w-xl leading-relaxed mb-10">
+              RM Apparels is a full-service clothing manufacturer producing
+              private-label sportswear, streetwear and basics for labels around
+              the world.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Link href="/collections">
+                <Button
+                  size="lg"
+                  className="w-full sm:w-auto h-14 px-8 text-base font-medium tracking-wide bg-white text-secondary hover:bg-white/90 group"
+                >
+                  Explore the Lookbook
+                  <ArrowUpRight className="ml-2 h-5 w-5 transition-transform group-hover:rotate-45" />
+                </Button>
+              </Link>
+              <Link href="/quote">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="w-full sm:w-auto h-14 px-8 text-base font-medium tracking-wide border-white/30 text-white bg-transparent hover:bg-white/10"
+                >
+                  Request a Quote
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
-      </section>
 
-      {/* Value Props Section */}
-      <section className="py-24 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16 max-w-2xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">Why Brands Choose Us</h2>
-            <p className="text-muted-foreground text-lg">We bridge the gap between premium quality and accessible manufacturing, giving emerging and established brands a competitive edge.</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { icon: CheckCircle2, title: "Low MOQ (30 Pcs)", desc: "Start small, scale fast. We support emerging brands with accessible minimums per design/color." },
-              { icon: Factory, title: "Fabric Variety", desc: "Choose from premium imported Chinese fabrics or cost-effective local Pakistani textiles." },
-              { icon: ShieldCheck, title: "Custom Branding", desc: "Full white-label service: custom tags, embroidery, screen printing, and packaging." },
-              { icon: Zap, title: "Fast Production", desc: "Streamlined processes mean shorter lead times from sampling to final delivery." }
-            ].map((prop, i) => (
-              <div key={i} className="p-8 rounded-2xl bg-card border shadow-sm hover:shadow-md transition-shadow group">
-                <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-primary transition-all duration-300">
-                  <prop.icon className="h-6 w-6 text-primary group-hover:text-primary-foreground" />
+        {/* Stats strip */}
+        <div className="relative z-10 border-t border-white/10 bg-secondary/60 backdrop-blur-sm">
+          <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
+            {stats.map((s) => (
+              <div key={s.label} className="px-2 md:px-6 py-6 md:py-8">
+                <div className="font-display text-3xl md:text-5xl font-semibold tracking-tight">
+                  {s.value}
                 </div>
-                <h3 className="text-xl font-display font-bold mb-3">{prop.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{prop.desc}</p>
+                <div className="mt-1 text-[11px] md:text-xs uppercase tracking-[0.2em] text-white/60">
+                  {s.label}
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Categories Section */}
-      <section className="py-24 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="flex justify-between items-end mb-12">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">Production Categories</h2>
-              <p className="text-muted-foreground text-lg">Browse our manufacturing capabilities.</p>
-            </div>
-            <Link href="/collections" className="hidden md:flex items-center text-primary font-semibold hover:underline">
-              View All <ArrowRight className="ml-1 h-4 w-4" />
-            </Link>
+      {/* INTRO / EDITORIAL */}
+      <section className="py-24 md:py-32 bg-background">
+        <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <div className="lg:col-span-5">
+            <p className="text-xs uppercase tracking-[0.3em] text-primary mb-6">
+              The House of RM
+            </p>
+            <h2 className="font-display text-4xl md:text-5xl font-semibold leading-[1.05] tracking-tight text-secondary">
+              A quiet,
+              <br />
+              precision-built
+              <br />
+              factory floor.
+            </h2>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { id: 'sports', name: 'Sports Wear', img: '/sports-tracksuit.png', desc: 'Technical fabrics, dry-fit mesh, high mobility.' },
-              { id: 'winter', name: 'Winter Collection', img: '/hoodie.png', desc: 'Heavyweight fleece, puffers, layered warmth.' },
-              { id: 'summer', name: 'Summer Collection', img: '/terry-shorts.png', desc: 'Breathable cottons, lightweight terry, casual fits.' }
-            ].map((cat) => (
-              <Link key={cat.id} href={`/collections/${cat.id}`} className="group relative rounded-2xl overflow-hidden aspect-[4/5] bg-card flex flex-col border shadow-sm">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10 transition-opacity group-hover:opacity-90"></div>
-                <img src={cat.img} alt={cat.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                <div className="relative z-20 mt-auto p-8 transform transition-transform duration-300 group-hover:-translate-y-2">
-                  <h3 className="text-2xl font-display font-bold text-white mb-2">{cat.name}</h3>
-                  <p className="text-white/80 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">{cat.desc}</p>
-                  <span className="inline-flex items-center text-primary font-semibold">
-                    View Catalog <ArrowRight className="ml-2 h-4 w-4" />
-                  </span>
-                </div>
-              </Link>
-            ))}
-          </div>
-          
-          <div className="mt-8 text-center md:hidden">
-            <Link href="/collections">
-              <Button variant="outline" className="w-full">View All Categories</Button>
+          <div className="lg:col-span-6 lg:col-start-7 space-y-6 text-lg leading-relaxed text-muted-foreground">
+            <p>
+              We started by stitching small runs for friends with brands. A
+              decade later, we run a fully vertical line — knitting, dyeing,
+              cutting, sewing, printing, and finishing — under one roof in
+              Pakistan, with imported tooling and trained operators.
+            </p>
+            <p>
+              Today we manufacture private-label collections for streetwear
+              labels, performance brands and corporate clients across four
+              continents. Same factory, same standards, every order.
+            </p>
+            <Link
+              href="/process"
+              className="inline-flex items-center gap-2 text-secondary font-medium border-b border-secondary/30 pb-1 hover:border-secondary transition-colors"
+            >
+              Inside our process
+              <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-32 bg-primary relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent pointer-events-none"></div>
-        <div className="container relative z-10 mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-5xl font-display font-bold text-primary-foreground mb-6 max-w-3xl mx-auto leading-tight">
-            Ready to elevate your brand's apparel line?
-          </h2>
-          <p className="text-primary-foreground/80 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
-            Get a detailed quote within 24 hours. Share your tech packs, reference images, or general ideas to get started.
+      {/* FEATURED LOOKBOOK */}
+      <section className="pb-24 md:pb-32 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+            <div>
+              <p className="text-xs uppercase tracking-[0.3em] text-primary mb-4">
+                Featured Pieces
+              </p>
+              <h2 className="font-display text-3xl md:text-5xl font-semibold tracking-tight text-secondary">
+                Selected from the catalog.
+              </h2>
+            </div>
+            <Link
+              href="/collections"
+              className="hidden md:inline-flex items-center text-secondary font-medium group"
+            >
+              View full catalog
+              <ArrowUpRight className="ml-2 h-4 w-4 transition-transform group-hover:rotate-45" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+            {featured.map((p) => (
+              <Link
+                key={p.slug}
+                href={`/products/${p.slug}`}
+                className="group block"
+              >
+                <div className="relative aspect-[4/5] overflow-hidden bg-muted">
+                  <img
+                    src={p.img}
+                    alt={p.name}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  />
+                  <div className="absolute top-3 left-3 text-[10px] uppercase tracking-[0.2em] bg-white/90 text-secondary px-2 py-1">
+                    {p.tag}
+                  </div>
+                </div>
+                <div className="pt-4 flex items-start justify-between gap-2">
+                  <h3 className="font-medium text-secondary text-sm md:text-base leading-snug">
+                    {p.name}
+                  </h3>
+                  <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-transform group-hover:rotate-45 group-hover:text-secondary shrink-0 mt-0.5" />
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          <div className="mt-10 md:hidden text-center">
+            <Link href="/collections">
+              <Button variant="outline" className="w-full">
+                View full catalog
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* COLLECTIONS */}
+      <section className="py-24 md:py-32 bg-muted/40 border-y">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mb-14">
+            <p className="text-xs uppercase tracking-[0.3em] text-primary mb-4">
+              Three Seasons
+            </p>
+            <h2 className="font-display text-3xl md:text-5xl font-semibold tracking-tight text-secondary">
+              Built for every season your brand sells in.
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+            {collections.map((c) => (
+              <Link
+                key={c.id}
+                href={`/collections/${c.id}`}
+                className="group relative block aspect-[3/4] overflow-hidden bg-secondary"
+              >
+                <img
+                  src={c.img}
+                  alt={c.name}
+                  className="absolute inset-0 w-full h-full object-cover opacity-90 transition-all duration-700 group-hover:scale-105 group-hover:opacity-100"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/30 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 p-6 md:p-8 text-white">
+                  <div className="text-[11px] uppercase tracking-[0.3em] text-white/70 mb-3">
+                    Collection
+                  </div>
+                  <h3 className="font-display text-3xl md:text-4xl font-semibold tracking-tight mb-3">
+                    {c.name}
+                  </h3>
+                  <p className="text-white/80 text-sm leading-relaxed max-w-xs mb-5">
+                    {c.desc}
+                  </p>
+                  <span className="inline-flex items-center gap-2 text-sm font-medium border-b border-white/40 pb-1">
+                    Open the collection
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* VALUE PROPS */}
+      <section className="py-24 md:py-32 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-14">
+            <div className="lg:col-span-5">
+              <p className="text-xs uppercase tracking-[0.3em] text-primary mb-4">
+                Why Brands Choose Us
+              </p>
+              <h2 className="font-display text-3xl md:text-5xl font-semibold tracking-tight text-secondary leading-[1.05]">
+                Manufacturing without the friction.
+              </h2>
+            </div>
+            <p className="lg:col-span-6 lg:col-start-7 text-lg text-muted-foreground leading-relaxed self-end">
+              Most factories are built for volume. We are built for brands —
+              short runs, custom branding, fast samples, and direct
+              communication from sampling through shipping.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-t border-l">
+            {valueProps.map((v) => (
+              <div
+                key={v.title}
+                className="border-r border-b p-8 group hover:bg-muted/40 transition-colors"
+              >
+                <v.icon className="h-7 w-7 text-primary mb-6" />
+                <h3 className="font-display text-xl font-semibold text-secondary mb-3">
+                  {v.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed text-sm">
+                  {v.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PROCESS STRIP */}
+      <section className="py-24 md:py-32 bg-secondary text-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-16">
+            <div className="lg:col-span-5">
+              <p className="text-xs uppercase tracking-[0.3em] text-primary/90 mb-4 text-white/60">
+                From sketch to shipment
+              </p>
+              <h2 className="font-display text-3xl md:text-5xl font-semibold tracking-tight leading-[1.05]">
+                A four-step
+                <br />
+                bulk-order process.
+              </h2>
+            </div>
+            <p className="lg:col-span-6 lg:col-start-7 text-lg text-white/70 leading-relaxed self-end">
+              Whether you arrive with a tech pack or a Pinterest board, we
+              guide you from concept to a stocked warehouse — usually in under
+              30 days.
+            </p>
+          </div>
+
+          <ol className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { n: "01", t: "Select Product", d: "Pick from our catalog or send your own designs." },
+              { n: "02", t: "Choose Fabric", d: "Imported or local, with fabric samples on request." },
+              { n: "03", t: "Customize", d: "Logos, labels, colors, packaging — fully white-label." },
+              { n: "04", t: "Submit Inquiry", d: "Approve sample, confirm PO, and we get into production." },
+            ].map((step) => (
+              <li
+                key={step.n}
+                className="border-t border-white/15 pt-6"
+              >
+                <div className="font-display text-5xl font-semibold text-primary mb-4">
+                  {step.n}
+                </div>
+                <h3 className="font-display text-xl font-semibold mb-2">
+                  {step.t}
+                </h3>
+                <p className="text-white/60 text-sm leading-relaxed">
+                  {step.d}
+                </p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* FABRIC TEASER */}
+      <section className="py-24 md:py-32 bg-background">
+        <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div>
+            <p className="text-xs uppercase tracking-[0.3em] text-primary mb-4">
+              Fabric Library
+            </p>
+            <h2 className="font-display text-3xl md:text-5xl font-semibold tracking-tight text-secondary leading-[1.05] mb-6">
+              Imported finish, local value.
+            </h2>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+              We stock and source over 40 active fabrics — from premium
+              imported Chinese knits with a smooth retail-grade hand feel, to
+              durable, cost-effective Pakistani textiles available with shorter
+              lead times.
+            </p>
+            <div className="grid grid-cols-2 gap-6 mb-10">
+              <div className="border-l-2 border-primary pl-4">
+                <Ruler className="h-5 w-5 text-primary mb-3" />
+                <div className="font-display text-lg font-semibold text-secondary mb-1">
+                  Imported (China)
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  Smooth finish, premium hand feel, retail-grade.
+                </p>
+              </div>
+              <div className="border-l-2 border-secondary pl-4">
+                <ShieldCheck className="h-5 w-5 text-secondary mb-3" />
+                <div className="font-display text-lg font-semibold text-secondary mb-1">
+                  Local (Pakistan)
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  Durable, cost-effective, faster availability.
+                </p>
+              </div>
+            </div>
+            <Link href="/fabrics">
+              <Button
+                variant="outline"
+                className="h-12 px-6 font-medium tracking-wide"
+              >
+                View Fabric Library
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-2 gap-3 md:gap-4">
+            <div className="aspect-[3/4] bg-muted overflow-hidden">
+              <img
+                src={`${BASE}cotton-tracksuit.png`}
+                alt="Fabric — cotton"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="aspect-[3/4] bg-muted overflow-hidden mt-8">
+              <img
+                src={`${BASE}sports-tracksuit.png`}
+                alt="Fabric — performance knit"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-24 md:py-32 bg-secondary text-white">
+        <div className="container mx-auto px-4 text-center max-w-3xl">
+          <p className="text-xs uppercase tracking-[0.3em] text-primary mb-6">
+            Start your line
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <h2 className="font-display text-4xl md:text-6xl font-semibold leading-[1.05] tracking-tight mb-8">
+            Tell us what you want to build.
+          </h2>
+          <p className="text-lg text-white/70 mb-12 max-w-xl mx-auto">
+            Send a tech pack, a sketch, or just a reference image. We reply
+            with a quote and lead time within 24 hours.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link href="/quote">
-              <Button size="lg" variant="secondary" className="h-14 px-8 text-lg font-semibold w-full sm:w-auto">
+              <Button
+                size="lg"
+                className="w-full sm:w-auto h-14 px-8 text-base font-medium tracking-wide bg-white text-secondary hover:bg-white/90"
+              >
                 Request a Quote
               </Button>
             </Link>
-            <Button size="lg" className="h-14 px-8 text-lg font-semibold w-full sm:w-auto bg-black text-white hover:bg-black/80" onClick={() => openWhatsApp("Hi, I want to start production.")}>
-              WhatsApp Now
+            <Button
+              size="lg"
+              variant="outline"
+              className="w-full sm:w-auto h-14 px-8 text-base font-medium tracking-wide border-white/30 text-white bg-transparent hover:bg-white/10"
+              onClick={() =>
+                openWhatsApp("Hi, I want to start a production run with RM Apparels.")
+              }
+            >
+              WhatsApp Us
             </Button>
           </div>
         </div>

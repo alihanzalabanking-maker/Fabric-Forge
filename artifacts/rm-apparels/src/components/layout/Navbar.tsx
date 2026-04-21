@@ -18,8 +18,8 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-md">
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          <span className="font-display font-bold text-2xl tracking-tight text-primary">RM APPARELS</span>
+        <Link href="/" className="flex items-center gap-2 text-secondary">
+          <img src={`${import.meta.env.BASE_URL}logo.svg`} alt="RM Apparels" className="h-9 w-auto" />
         </Link>
 
         {/* Desktop Nav */}

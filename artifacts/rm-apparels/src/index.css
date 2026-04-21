@@ -66,13 +66,13 @@
   --popover-foreground: 222 47% 11%;
   --popover-border: 214 32% 91%;
   
-  /* Electric Orange */
-  --primary: 21 100% 50%;
+  /* Royal Blue */
+  --primary: 220 90% 32%;
   --primary-foreground: 0 0% 100%;
   
-  /* Deep Slate */
-  --secondary: 222 47% 11%;
-  --secondary-foreground: 210 40% 98%;
+  /* Pure Black */
+  --secondary: 0 0% 7%;
+  --secondary-foreground: 0 0% 100%;
   
   --muted: 210 40% 96.1%;
   --muted-foreground: 215.4 16.3% 46.9%;
@@ -84,7 +84,7 @@
   --destructive-foreground: 210 40% 98%;
   
   --input: 214.3 31.8% 91.4%;
-  --ring: 21 100% 50%;
+  --ring: 220 90% 32%;
 
   --app-font-sans: 'Outfit', sans-serif;
   --app-font-display: 'Clash Display', sans-serif;
@@ -114,7 +114,7 @@
   --popover-foreground: 210 40% 98%;
   --popover-border: 217 33% 17%;
   
-  --primary: 21 100% 50%;
+  --primary: 220 90% 55%;
   --primary-foreground: 0 0% 100%;
   
   --secondary: 217 33% 17%;
@@ -130,7 +130,7 @@
   --destructive-foreground: 210 40% 98%;
   
   --input: 217 33% 17%;
-  --ring: 21 100% 50%;
+  --ring: 220 90% 55%;
 }
 
 @layer base {
