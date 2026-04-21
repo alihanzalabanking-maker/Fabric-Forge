@@ -1,0 +1,126 @@
+Create a premium, high-end clothing manufacturing website for RM Apparels, designed for both B2B and B2C audiences, inspired by the structure and user experience of brands like Joma Sports and Nike.
+
+Brand Name
+
+RM Apparels
+
+Business Type
+
+Clothing Manufacturer specializing in:
+
+Bulk production (B2B clients such as brands, wholesalers, resellers)
+Retail-style product showcasing (B2C presentation)
+Primary Objectives
+Attract and convert B2B clients
+Showcase product quality, variety, and manufacturing capability
+Clearly communicate MOQ (Minimum Order Quantity)
+Highlight fabric options (Imported vs Local)
+Encourage inquiries via Quote requests and WhatsApp
+Design Requirements
+Premium, modern, sporty aesthetic
+Clean and minimal UI with strong product visuals
+Fully responsive (mobile-first)
+Smooth hover effects and subtle animations
+Website Structure
+1. Homepage
+
+Hero Section
+
+Heading:
+“RM Apparels – We Manufacture Premium Quality Apparel for Your Brand”
+Subtext:
+“Bulk Orders | Custom Designs | Low MOQ”
+CTA Buttons:
+Get Quote
+View Collection
+
+B2B Highlights Section
+
+Minimum Order Quantity: 30 Pieces
+Imported & Local Fabric Options
+Custom Branding Available
+Fast Production Time
+
+Categories Preview
+
+Summer Collection
+Winter Collection
+Sports Collection
+2. Collections Page
+
+Summer Collection
+
+Terry Shorts
+Cotton Shorts
+Crew Neck T-Shirts
+Polo Shirts
+Cotton Tracksuits
+
+Winter Collection
+
+Hoodies
+Sweatshirts
+Trousers
+Puffer Jackets
+Varsity Jackets
+Zipper Jackets
+
+Sports Collection
+
+Dry Fit T-Shirts (Mesh / Interlock)
+Tracksuits with multiple fabric options:
+Trinda (various GSM)
+Polyester Fleece
+Scuba
+Nylon Crush
+Popcorn Spandex
+Micro Twill
+3. Product Detail Page (High Priority)
+
+Example Product: Dry Fit Sports T-Shirt
+
+Display:
+
+Fabric Options:
+Imported (China)
+Local (Pakistan)
+Fabric Types:
+Interlock
+Mesh
+GSM Options:
+120 GSM
+140 GSM
+160 GSM
+
+B2B Conversion Section
+
+MOQ: Minimum 30 pieces per design
+Pricing: Based on fabric and quantity
+
+CTA Buttons:
+
+Request Quote
+WhatsApp Now
+4. Fabric Information Section
+
+Imported Fabric (China)
+
+Smooth finish
+Premium feel
+Higher cost
+
+Local Fabric (Pakistan)
+
+Cost-effective
+Durable
+Faster availability
+5. Bulk Order Process
+Select Product
+Choose Fabric
+Customize Design (logo, colors)
+Submit Inquiry
+6. WhatsApp Integration (Essential)
+
+Primary CTA:
+
+“Send Your Design on WhatsApp”

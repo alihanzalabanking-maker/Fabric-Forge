@@ -1,0 +1,62 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "ngjkhA78ULd0879dO9huh"
+uri = "file://artifacts/rm-apparels/public/hero.png"
+type = "image"
+title = "Clothing factory hero image"
+
+[[generated]]
+id = "kOFYGEWfOzwj5hbyCgrP5"
+uri = "file://artifacts/rm-apparels/public/terry-shorts.png"
+type = "image"
+title = "Terry Shorts product photo"
+
+[[generated]]
+id = "cOhHrtbRYPHU6XN_TZ8KM"
+uri = "file://artifacts/rm-apparels/public/cotton-tracksuit.png"
+type = "image"
+title = "Cotton Tracksuit product photo"
+
+[[generated]]
+id = "C4g1StrSmNrypodmwGyfz"
+uri = "file://artifacts/rm-apparels/public/hoodie.png"
+type = "image"
+title = "Hoodie product photo"
+
+[[generated]]
+id = "i4xjNXVROiemAI2DPZ7-7"
+uri = "file://artifacts/rm-apparels/public/puffer-jacket.png"
+type = "image"
+title = "Puffer Jacket product photo"
+
+[[generated]]
+id = "5ledR5l2n5z50AgjnzPYi"
+uri = "file://artifacts/rm-apparels/public/dry-fit-tshirt.png"
+type = "image"
+title = "Dry Fit T-Shirt product photo"
+
+[[generated]]
+id = "FgKOemhubn_aUkj7ELNcS"
+uri = "file://artifacts/rm-apparels/public/sports-tracksuit.png"
+type = "image"
+title = "Sports Tracksuit product photo"
+
+[[generated]]
+id = "6TXq9jPg5siG8hSl2tn7G"
+uri = "file://artifacts/rm-apparels/public/polo-shirt.png"
+type = "image"
+title = "Polo Shirt product photo"
+
+[[generated]]
+id = "xpzXo43RR9UGr-htHRwmX"
+uri = "file://artifacts/rm-apparels/public/varsity-jacket.png"
+type = "image"
+title = "Varsity Jacket product photo"
+
+[[generated]]
+id = "NVIxu6FBI4EcW1mZskm7Q"
+uri = "file://artifacts/rm-apparels/public/zipper-jacket.png"
+type = "image"
+title = "Zipper Jacket product photo"
