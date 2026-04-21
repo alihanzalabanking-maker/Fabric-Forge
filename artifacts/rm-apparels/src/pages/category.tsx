@@ -48,11 +48,22 @@ export default function CategoryPage() {
             <Link key={product.id} href={`/products/${product.slug}`} className="group block">
               <div className="bg-card border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow h-full flex flex-col">
                 <div className="aspect-[3/4] relative overflow-hidden bg-muted">
-                  <img 
-                    src={product.image} 
-                    alt={product.name} 
-                    className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="absolute inset-0 w-full h-full object-cover object-center transition-all duration-700 ease-out group-hover:opacity-0 group-hover:scale-105"
                   />
+                  {product.wornImage && (
+                    <img
+                      src={product.wornImage}
+                      alt={`${product.name} on model`}
+                      aria-hidden
+                      className="absolute inset-0 w-full h-full object-cover object-center opacity-0 scale-105 transition-all duration-700 ease-out group-hover:opacity-100 group-hover:scale-100"
+                    />
+                  )}
+                  <span className="absolute bottom-3 right-3 text-[10px] uppercase tracking-[0.2em] bg-secondary/85 text-white px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10">
+                    On Model
+                  </span>
                 </div>
                 <div className="p-5 flex flex-col flex-1">
                   <div className="text-xs text-muted-foreground uppercase tracking-wider mb-2 font-semibold">MOQ: {product.moq} Pcs</div>

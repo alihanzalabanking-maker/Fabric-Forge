@@ -28,28 +28,28 @@ const featured = [
     name: "Polo Shirts",
     slug: "polo-shirt",
     img: `${BASE}polo-shirt.png`,
-    backImg: `${BASE}polo-shirt-back.png`,
+    backImg: `${BASE}polo-shirt-worn.png`,
     tag: "Summer Essentials",
   },
   {
     name: "Heavyweight Hoodies",
     slug: "hoodie",
     img: `${BASE}hoodie.png`,
-    backImg: `${BASE}hoodie-back.png`,
+    backImg: `${BASE}hoodie-worn.png`,
     tag: "Winter Drop",
   },
   {
     name: "Dry Fit Performance Tee",
     slug: "dry-fit-tshirt",
     img: `${BASE}dry-fit-tshirt.png`,
-    backImg: `${BASE}dry-fit-tshirt-back.png`,
+    backImg: `${BASE}dry-fit-tshirt-worn.png`,
     tag: "Sports",
   },
   {
     name: "Varsity Jackets",
     slug: "varsity-jacket",
     img: `${BASE}varsity-jacket.png`,
-    backImg: `${BASE}varsity-jacket-back.png`,
+    backImg: `${BASE}varsity-jacket-worn.png`,
     tag: "Outerwear",
   },
 ];
@@ -117,13 +117,15 @@ export default function Home() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Hero zoom-out + parallax effect: image starts at scale 1.15 and shrinks to 1
-  // and drifts upward as the user scrolls past the hero.
-  const heroProgress = Math.min(scrollY / 700, 1);
-  const heroScale = 1.15 - heroProgress * 0.15;
-  const heroTranslate = heroProgress * -60;
-  const heroFade = 1 - heroProgress * 0.4;
-  const contentTranslate = heroProgress * -40;
+  // Hero zoom-out + parallax effect — pronounced cinematic scale-down on both
+  // image AND text as the user scrolls past the hero.
+  const heroProgress = Math.min(scrollY / 600, 1);
+  const heroScale = 1.25 - heroProgress * 0.4; // 1.25 -> 0.85
+  const heroTranslate = heroProgress * -120;
+  const heroFade = 1 - heroProgress * 0.55;
+  const textScale = 1 - heroProgress * 0.45; // text shrinks to 55%
+  const textTranslate = heroProgress * -80;
+  const textFade = 1 - heroProgress * 0.7;
 
   return (
     <Layout>
@@ -147,8 +149,12 @@ export default function Home() {
         </div>
 
         <div
-          className="container relative z-10 mx-auto px-4 pt-20 pb-16 sm:pt-24 sm:pb-20 md:pt-28 md:pb-24 lg:pt-36 lg:pb-28 flex-1 flex flex-col justify-center"
-          style={{ transform: `translate3d(0, ${contentTranslate}px, 0)` }}
+          className="container relative z-10 mx-auto px-4 pt-20 pb-16 sm:pt-24 sm:pb-20 md:pt-28 md:pb-24 lg:pt-36 lg:pb-28 flex-1 flex flex-col justify-center will-change-transform"
+          style={{
+            transform: `translate3d(0, ${textTranslate}px, 0) scale(${textScale})`,
+            transformOrigin: "left center",
+            opacity: textFade,
+          }}
         >
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 text-[10px] sm:text-xs uppercase tracking-[0.3em] text-white/70 mb-6 sm:mb-8">
@@ -291,7 +297,7 @@ export default function Home() {
                     {p.tag}
                   </div>
                   <div className="absolute bottom-3 right-3 text-[10px] uppercase tracking-[0.2em] bg-secondary/80 text-white px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10">
-                    Back View
+                    On Model
                   </div>
                 </div>
                 <div className="pt-4 flex items-start justify-between gap-2">

@@ -90,3 +90,39 @@ id = "aquz4IAgqXpqtgs3hJbji"
 uri = "file://attached_assets/generated_images/generated_image_3.png"
 type = "image"
 title = "generated_image"
+
+[[generated]]
+id = "4p3gNol8d1gvaytpbKwUX"
+uri = "file://attached_assets/generated_images/generated_image_4.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "fW8YGAxSCZesxJTIHweRS"
+uri = "file://attached_assets/generated_images/generated_image_5.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "f2fsknfSnBdT3aJbUb_P2"
+uri = "file://attached_assets/generated_images/generated_image_6.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "d27bgdxbMfKf-drwm2b3T"
+uri = "file://attached_assets/generated_images/generated_image_7.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "VfHQuXubzSWY-EFg1jxAo"
+uri = "file://attached_assets/generated_images/generated_image_8.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "Qup5RZ-EDIK11Eh7PnV_d"
+uri = "file://attached_assets/generated_images/generated_image_9.png"
+type = "image"
+title = "generated_image"
