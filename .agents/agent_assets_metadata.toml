@@ -66,3 +66,27 @@ id = "x7_X1SWV4K1YIhRR-HEQX"
 uri = "file://attached_assets/generated_images/generated_image.png"
 type = "image"
 title = "generated_image"
+
+[[generated]]
+id = "SBv5NXPU_7J1yQ55fZrGH"
+uri = "file://attached_assets/generated_images/generated_image_0.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "VL8IbWYzE3RqKOl5x8G5s"
+uri = "file://attached_assets/generated_images/generated_image_1.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "QsoXFozpgvbuKyXO7neP5"
+uri = "file://attached_assets/generated_images/generated_image_2.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "aquz4IAgqXpqtgs3hJbji"
+uri = "file://attached_assets/generated_images/generated_image_3.png"
+type = "image"
+title = "generated_image"
