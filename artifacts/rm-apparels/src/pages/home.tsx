@@ -252,7 +252,7 @@ export default function Home() {
       </section>
 
       {/* FEATURED LOOKBOOK */}
-      <section className="pb-24 md:pb-32 bg-background">
+      <section id="collections" className="pb-24 md:pb-32 bg-background scroll-mt-24">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
             <div>
@@ -405,7 +405,7 @@ export default function Home() {
       </section>
 
       {/* PROCESS STRIP */}
-      <section className="py-24 md:py-32 bg-secondary text-white">
+      <section id="process" className="py-24 md:py-32 bg-secondary text-white scroll-mt-24">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-16">
             <div className="lg:col-span-5">
@@ -452,7 +452,7 @@ export default function Home() {
       </section>
 
       {/* FABRIC TEASER */}
-      <section className="py-24 md:py-32 bg-background">
+      <section id="fabrics" className="py-24 md:py-32 bg-background scroll-mt-24">
         <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div>
             <p className="text-xs uppercase tracking-[0.3em] text-primary mb-4">
@@ -518,7 +518,7 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 md:py-32 bg-secondary text-white">
+      <section id="contact" className="py-24 md:py-32 bg-secondary text-white scroll-mt-24">
         <div className="container mx-auto px-4 text-center max-w-3xl">
           <p className="text-xs uppercase tracking-[0.3em] text-primary mb-6">
             Start your line
