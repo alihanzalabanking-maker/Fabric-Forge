@@ -49,12 +49,12 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/85 backdrop-blur-md">
-      <div className="container mx-auto px-4 h-24 flex items-center justify-between">
+      <div className="container mx-auto px-4 h-20 md:h-24 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 text-secondary">
           <img
             src={`${import.meta.env.BASE_URL}logo.svg`}
             alt="RM Apparels"
-            className="h-11 w-auto"
+            className="h-9 md:h-11 w-auto"
           />
         </Link>
 

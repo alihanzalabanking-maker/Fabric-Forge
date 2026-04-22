@@ -200,11 +200,11 @@ export default function Home() {
         <div className="relative z-10 border-t border-white/10 bg-secondary/60 backdrop-blur-sm">
           <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
             {stats.map((s) => (
-              <div key={s.label} className="px-2 md:px-6 py-6 md:py-8">
+              <div key={s.label} className="px-3 md:px-6 py-6 md:py-8">
                 <div className="font-display text-3xl md:text-5xl font-semibold tracking-tight">
                   {s.value}
                 </div>
-                <div className="mt-1 text-[11px] md:text-xs uppercase tracking-[0.2em] text-white/60">
+                <div className="mt-1 text-[10px] md:text-xs uppercase tracking-[0.1em] md:tracking-[0.2em] text-white/60 break-words leading-snug">
                   {s.label}
                 </div>
               </div>
