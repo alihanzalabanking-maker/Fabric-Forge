@@ -104,7 +104,7 @@ export function Navbar() {
 
       {/* Mobile Nav */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-24 left-0 w-full bg-background border-b shadow-lg flex flex-col p-4 gap-3 animate-in slide-in-from-top-2">
+        <div className="md:hidden absolute top-20 left-0 w-full bg-background border-b shadow-lg flex flex-col p-4 gap-3 animate-in slide-in-from-top-2">
           {navLinks.map((link) => {
             const isActive =
               link.href === "/"
