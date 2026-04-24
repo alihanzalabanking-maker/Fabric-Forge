@@ -213,6 +213,35 @@ export default function Home() {
         </div>
       </section>
 
+      {/* TRUSTED BY — client/partner logos. Replace these with your real client names/logos. */}
+      <section aria-label="Trusted by" className="bg-background border-b">
+        <div className="container mx-auto px-4 py-10 md:py-14">
+          <p className="text-center text-[10px] md:text-xs uppercase tracking-[0.3em] text-muted-foreground mb-6 md:mb-8">
+            Trusted by brands worldwide
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-6 md:gap-x-14 lg:gap-x-20 opacity-80">
+            <span className="font-display text-xl md:text-2xl font-semibold tracking-tight text-secondary">
+              ATELIER 21
+            </span>
+            <span className="font-display text-xl md:text-2xl italic font-light tracking-wider text-secondary">
+              Northwind &amp; Co.
+            </span>
+            <span className="font-display text-xl md:text-2xl font-semibold uppercase tracking-[0.25em] text-secondary">
+              Maison&nbsp;Lyon
+            </span>
+            <span className="font-display text-xl md:text-2xl font-semibold tracking-tight text-secondary">
+              KAIROS / SPORT
+            </span>
+            <span className="font-display text-xl md:text-2xl italic font-light text-secondary">
+              Hemingway Goods
+            </span>
+            <span className="font-display text-xl md:text-2xl font-semibold uppercase tracking-[0.2em] text-secondary">
+              Studio&nbsp;NORD
+            </span>
+          </div>
+        </div>
+      </section>
+
       {/* INTRO / EDITORIAL */}
       <section className="py-24 md:py-32 bg-background">
         <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">

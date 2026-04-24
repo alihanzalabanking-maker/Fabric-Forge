@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" fill="none">
+  <g>
+    <rect x="2" y="8" width="44" height="44" rx="6" fill="currentColor"/>
+    <path d="M12 42 V18 H22 a6 6 0 0 1 0 12 H14 M22 30 L30 42" stroke="white" stroke-width="3.2" stroke-linecap="square" stroke-linejoin="miter" fill="none"/>
+    <path d="M30 42 V18 L36 30 L42 18 V42" stroke="white" stroke-width="3.2" stroke-linecap="square" stroke-linejoin="miter" fill="none"/>
+  </g>
+  <text x="56" y="32" font-family="'Clash Display','Inter',sans-serif" font-size="20" font-weight="700" letter-spacing="2" fill="currentColor">RM APPARELS</text>
+  <text x="56" y="48" font-family="'Inter',sans-serif" font-size="8" font-weight="500" letter-spacing="3" fill="currentColor" opacity="0.6">PREMIUM MANUFACTURING</text>
+</svg>

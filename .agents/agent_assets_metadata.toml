@@ -1,5 +1,4 @@
 uploads = []
-outputs = []
 
 [[generated]]
 id = "ngjkhA78ULd0879dO9huh"
@@ -126,3 +125,9 @@ id = "Qup5RZ-EDIK11Eh7PnV_d"
 uri = "file://attached_assets/generated_images/generated_image_9.png"
 type = "image"
 title = "generated_image"
+
+[[outputs]]
+id = "7vm2kaUdbvyXSvhCKZm6d"
+uri = "file://rm-apparels-cloudflare.zip"
+type = "unspecified"
+title = "RM Apparels — Cloudflare Pages upload bundle"
